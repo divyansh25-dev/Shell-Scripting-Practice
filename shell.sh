@@ -9,11 +9,17 @@ read username
 sudo useradd -m $username 
 sudo passwd $username
 #User will be created with a password and username
-sudo groupadd $username
-sudo usermod -s -G $username $username
-echo "Congratulations you are added to a group!"
-
-
+echo "Do you want to be added in the group?Please enter yes or no"
+read n
+yes=$(echo $n | tr -s '[:upper:]' '[:lower:]')
+if [[  "$n" = "yes"  ]] ; then
+  sudo groupadd $username
+  sudo usermod -s -G $username $username
+  echo "Congratulations you are added to a group!"
+else
+  echo "You are not added to any group."
+fi
+exit
 
 
 
