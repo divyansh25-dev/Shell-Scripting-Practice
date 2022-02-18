@@ -7,5 +7,10 @@ sudo cat  /var/log/apache2/apache2.logs #This command will give us the logs of a
 echo "Enter Your Username:"
 read username
 sudo useradd -m $username 
+echo "Enter Your Password" 
+read password
+sudo passwd $password
+#User will be created with a password and username
+
 
 
