@@ -1,2 +1,3 @@
 #! /bin/bash
-pwd
+pwd #To see what directory we are in!
+ifconfig | grep inet
