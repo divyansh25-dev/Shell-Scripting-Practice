@@ -9,6 +9,31 @@ read username
 sudo useradd -m $username 
 sudo passwd $username
 #User will be created with a password and username
+sudo groupadd $username
+sudo usermod -s -G $username $username
+echo "Congratulations you are added to a group!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
